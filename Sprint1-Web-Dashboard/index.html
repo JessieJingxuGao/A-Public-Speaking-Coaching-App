@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Responsive vertical menu navigation, Data Dashboard of Vocal Analysis</title>
+
+		<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel="stylesheet" href="main.css">
+
+		<!-- for progress bar -->
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+
+		<!-- jquery for trigger ?? -->
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<!-- haven't tried ionic,highchart,data/js -->
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+
+
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
+
+		<!-- <script src="main.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+<!--
+		<style>
+			.ad {
+				position: absolute;
+				width: 300px;
+				height: 250px;
+				border: 1px solid #ddd;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 250px;
+				z-index: 10;
+			}
+			.ad .close {
+				position: absolute;
+				font-family: 'ionicons';
+				width: 20px;
+				height: 20px;
+				color: #fff;
+				background-color: #999;
+				font-size: 20px;
+				left: -20px;
+				top: -1px;
+				display: table-cell;
+				vertical-align: middle;
+				cursor: pointer;
+				text-align: center;
+			}
+		</style> -->
+
+
+		<!-- <script type="text/javascript">
+			$(function() {
+				$('.close').click(function() {
+					$('.ad').css('display', 'none');
+				})
+			})
+		</script> -->
+
+	</head>
+
+
+
+
+	<body>
+
+		<div class="header">
+			<div class="logo">
+				<!-- <i class="fa fa-tachometer"></i>  not sure what this is for-->
+				<span>Sonorus</span>
+			</div>
+			<!-- <a href="#" class="nav-trigger"><span></span></a> -->
+			<a href="#" class="nav-trigger"> </a>
+		</div>
+
+
+	<div class="side-nav">
+
+			<div class="logo">
+				<!-- <i class="fa fa-tachometer"></i> -->
+						<!-- from font-awsome , it's the icon -->
+				<span>Sonorus</span>
+			</div>
+
+			<nav>
+				<ul>
+					<li>
+						<a href="#">
+							<span><i class="fa fa-user"></i></span>
+							<span>Users</span>
+						</a>
+					</li>
+					<!-- <li>
+						<a href="#">
+							<span><i class="fa fa-envelope"></i></span>
+							<span>Messages</span>
+						</a>
+					</li> -->
+					<li class="active">
+						<a href="#">
+							<span><i class="fa fa-bar-chart"></i></span>
+							<span>Analytics</span>
+						</a>
+					</li>
+					<!-- <li> -->
+						<!-- <a href="#"> -->
+							<!-- <span><i class="fa fa-credit-card-alt"></i></span> -->
+							<!-- <span>Payments</span> -->
+						<!-- </a> -->
+					<!-- </li> -->
+				</ul>
+			</nav>
+	</div>
+
+	<div class="main-content">
+
+			<div class="title">
+				<!-- Analytics -->
+				Performance Metrics
+			</div>
+
+			<!-- <div class='ad'>
+				<div class="close">
+					<i class="ion-ios-close-empty"></i>
+				</div>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+				     style="display:inline-block;width:300px;height:250px"
+				     data-ad-client="ca-pub-8408356133845039"
+				     data-ad-slot="8154430505"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div> -->
+
+			<div class="main">
+
+
+			<!-- later shoule be turned into javascript +
+			width could be more than 100% if it exeeds standard - transparent front bar -->
+				<div class="widget2">
+					<div class="title">Clarity</div>
+					<div class="ProgressBar">
+							<div class="w3-light-grey">
+							<div class="w3-container w3-khaki w3-padding w3-center" style="width:75%">75%</div>
+							</div>
+					</div>
+				</div>
+
+				 <div class="widget2">
+					 <div class="title">Uptalk</div>
+						 <div class="ProgressBar">
+								 <div class="w3-light-grey">
+								 <div class="w3-container w3-khaki w3-padding w3-center" style="width:75%">10</div>
+								 </div>
+						 </div>
+					</div>
+
+					<div class="widget2">
+						<div class="title">WPM</div>
+								<div class="ProgressBar">
+										<div class="w3-light-grey">
+										<div class="w3-container w3-khaki w3-padding w3-center" style="width:95%">120</div>
+										</div>
+								</div>
+					 </div>
+
+					 <div class="widget2">
+						 <div class="title">Pause</div>
+								 <div class="ProgressBar">
+										 <div class="w3-light-grey">
+										 <div class="w3-container w3-khaki w3-padding w3-center" style="width:65%">11</div>
+										 </div>
+								 </div>
+						</div>
+
+
+				<div class="widget1">
+					<div class="title">Number of Fillers</div>
+					<!-- <div class="chart"></div> -->
+					<canvas id="fillers" width="500px" height="250px"> </canvas>
+							<script type="text/javascript">
+							var barData = {
+									labels: ['um', 'ah', 'uh', 'mm', 'basically', 'literally', 'sorry','well','you know'],
+									datasets: [
+											{
+													label: 'Selected Fillers',
+													backgroundColor: 'rgba(255, 159, 64, 0.2)',
+													data: [10,4,6,2,5,9,4,15,10]
+											}
+									]
+							};
+
+							var fillersChartOptions = {
+							scales: {
+									yAxes: [{
+											ticks: {
+													beginAtZero:true
+											}
+									}]
+							}};
+
+							var context = document.getElementById('fillers').getContext('2d');
+							// var fillersChart = new Chart(context).Bar(barData);
+							var fillersChart = new Chart(context, {
+							type: 'bar',
+							data: barData,
+							options: fillersChartOptions
+							});
+							</script>
+				 </div>
+
+
+
+				 <div class="widget1">
+					 <div class="title">Fillers in Scripts</div>
+					 		<div style="width:500px; height:250px; overflow:auto;">
+								 <table border="0" cellspacing="0" width="500px" height="250px" class="front">
+										 <tr>
+												 <!-- <td></td> -->
+											<td>
+												 <!-- <td width="500px" -->
+													 <p style="border:3px; padding: 1em;">
+														 <mark>Um</mark> For many people, public speaking is <mark>well</mark> scarier than spiders, heights, and even death...but business dose not care. In business, captivating your audience is critical to getting that job or landing that deal.
+														 </br>
+														 <br>Using real-time speech analysis in a fun, simulated practice environment,   <mark>uh</mark> <mark>basically</mark> Sonorus equips business students and professionals with the confidence to become compelling communicators.
+														 </br>
+													 </br>
+														 For many people, public speaking is scarier than spiders, heights, and even death...but business dose not care. <mark>Um</mark> in business, captivating your audience is critical to getting that job or landing that deal.
+														 </br>
+														 <br>Using real-time speech analysis in a fun, simulated practice environment,  Sonorus equips business students and professionals with the confidence to become compelling communicators.
+														 <br>
+														 <br>...
+													 </p>
+											 </td>
+												 <!-- <td></td> -->
+											</tr>
+								 </table>
+							</div>
+				</div>
+
+
+				<div class="widget1">
+					<div class="title">Pitch Variety</div>
+					<!-- <div class="chart"></div> -->
+					<canvas id="pitch" width="500px" height="250px"> </canvas>
+							<script type="text/javascript">
+							var barData = {
+									labels: ['80', '85', '90', '95', '100', '105', '110', '115', '120', '125', '130', '135', '140', '145', '150', '155'],
+									datasets: [
+											{
+													label: 'Pitch (Hz)',
+													backgroundColor: 'rgba(255, 159, 64, 0.2)',
+													data: [10,4,6,2,5,9,4,15,10,5,9,4,15,10,10,9]
+											}
+									]
+							};
+
+							var fillersChartOptions = {
+							scales: {
+									yAxes: [{
+											ticks: {
+													beginAtZero:true
+											}
+									}],
+							xAxes: [{
+								barPercentage: 1.0,
+								categoryPercentage: 1.0
+							}]
+							}
+							};
+
+							var context = document.getElementById('pitch').getContext('2d');
+							// var fillersChart = new Chart(context).Bar(barData);
+							var fillersChart = new Chart(context, {
+							type: 'bar',
+							data: barData,
+							options: fillersChartOptions
+							});
+							</script>
+				 </div>
+
+
+				 				<div class="widget1">
+				 					<div class="title">Volume Variety</div>
+				 					<!-- <div class="chart"></div> -->
+				 					<canvas id="volume" width="500px" height="250px"> </canvas>
+				 							<script type="text/javascript">
+				 							var barData = {
+				 									labels: ['40', '45', '50', '55', '60', '65', '70', '75', '80', '85'],
+				 									datasets: [
+				 											{
+				 													label: 'Volume (dB)',
+				 													backgroundColor: 'rgba(255, 159, 64, 0.2)',
+				 													data: [10,4,6,2,5,9,4,15,10,5]
+				 											}
+				 									]
+				 							};
+
+											var fillersChartOptions = {
+											scales: {
+													yAxes: [{
+															ticks: {
+																	beginAtZero:true
+															}
+													}],
+											xAxes: [{
+												barPercentage: 1.0,
+												categoryPercentage: 1.0
+											}]
+											}
+											};
+
+				 							var context = document.getElementById('volume').getContext('2d');
+				 							// var fillersChart = new Chart(context).Bar(barData);
+				 							var fillersChart = new Chart(context, {
+				 							type: 'bar',
+				 							data: barData,
+				 							options: fillersChartOptions
+				 							});
+				 							</script>
+				 				 </div>
+
+
+			 </div>
+
+</div>
+
+	</body>
+</html>

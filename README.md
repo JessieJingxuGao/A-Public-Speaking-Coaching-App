@@ -1,4 +1,4 @@
-# Cornell Tech 2016-2017 Startup-Studio Project (in progress) </br>
+# Cornell Tech 2016-2017 Startup-Studio Project </br>
 
 ## More about Cornell Tech Studio 
 https://tech.cornell.edu/studio/curriculum/startup-studio-1
@@ -7,6 +7,10 @@ https://tech.cornell.edu/studio/curriculum/startup-studio-1
 For many people, public speaking is scarier than spiders, heights, and even death...but business doesn’t care. In business, captivating your audience is critical to getting that job or landing that deal.  </br>
 We develop Sonorus, an automated public speaking coach that reinforces practice through fun, custom presentation environments.</br>
 Using real-time speech analysis in a simulated practice environment, Sonorus equips professionals with the confidence to become compelling communicators.
+
+## Demo Video
+https://drive.google.com/file/d/0Bz5ACRf7WVd9Mm5QejZSQldJRGc/view?usp=sharing
+
 
 ## Repository Content (Artifacts of the first sprint)
 1. Data Visulization and Dashboard for Performance Metrics </br>

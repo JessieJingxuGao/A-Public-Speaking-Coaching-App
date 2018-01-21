@@ -8,8 +8,13 @@ For many people, public speaking is scarier than spiders, heights, and even deat
 We develop Sonorus, an automated public speaking coach that reinforces practice through fun, custom presentation environments.</br>
 Using real-time speech analysis in a simulated practice environment, Sonorus equips professionals with the confidence to become compelling communicators.
 
+
+## Poster
+https://drive.google.com/file/d/0B2CYj2BTRFDMSGVsdm1ySGRSUEU/view?usp=sharing
+
 ## Demo Video
 https://drive.google.com/file/d/0Bz5ACRf7WVd9Mm5QejZSQldJRGc/view?usp=sharing
+
 
 
 ## Repository Content (Artifacts of the first sprint)

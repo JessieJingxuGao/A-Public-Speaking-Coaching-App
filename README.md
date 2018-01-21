@@ -22,7 +22,6 @@ https://drive.google.com/file/d/0Bz5ACRf7WVd9Mm5QejZSQldJRGc/view?usp=sharing
 https://jessiejingxugao.github.io/SonorusDashBoard/ </br>
 2. Real-time Vocal Analytics with emoji feedback </br>
 https://bc564.github.io/test/</br>
-3. on going...
 
 
 

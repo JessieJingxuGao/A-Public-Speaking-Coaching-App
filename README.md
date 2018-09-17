@@ -1,4 +1,6 @@
-# Cornell Tech 2016-2017 Startup-Studio Project </br>
+# A Public-Speaking Coaching App featured real-time interactive emoji feedback and post-speech analytics dashboard on Ionic Framework with Google speech to text conversion API and HTML5 Web Audio API </br>  
+
+Cornell Tech 2016-2017 Startup-Studio Project 
 
 ## More about Cornell Tech Studio 
 https://tech.cornell.edu/studio/curriculum/startup-studio-1
